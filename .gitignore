@@ -1,0 +1,9 @@
+# My development files :)
+*.sublime-project
+*.sublime-workspace
+
+# Do not share your discord bot tokens online!!!!
+token.txt
+
+# Stores users and their preferences/data that the bot tracks.
+users.txt
