@@ -10,7 +10,7 @@ For now it only has some very basic functionality, which includes:
 ## Dependancies
 Obviously it uses the ever so popular [discord.js]() js module for interacting with Discords Official API, and it also uses fasetto's amazing (unofficial) [Krunker API](https://www.npmjs.com/package/@fasetto/krunker.io) with which without the idea would never be able to become a reality!
 
-## Instalation
+## Installation
 Yeah... nah.
 
 ## Contribution
