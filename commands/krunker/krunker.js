@@ -10,10 +10,12 @@ class krunkerStatsCommand extends commando.Command {
             aliases: ["get", "stats"],
             group: "krunker",
             memberName: "krunker",
-            description: "gets a krunker players statistics",
+            description: "Gets a krunker players statistics",
+            details: "Use this command to quickly view your or anyones stats. See someone in game who's really good? Check them out with this command!",
             args: [
                 {
                     key: "player",
+                    label: 'player',
                     prompt: "please include a krunker username",
                     type: "string"
                 }

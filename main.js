@@ -8,7 +8,7 @@ bot.commandPrefix = ">";
 
 bot.registry.registerGroup('random', 'Random')
     .registerGroup('krunker', 'Krunker')
-    .registerGroup('utils', 'Utilities');
+    .registerGroup('utils', 'Utility');
 
 // I want to make my own help commands, not use yours!
 //bot.registry.registerDefaults();
