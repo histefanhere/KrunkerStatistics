@@ -88,7 +88,7 @@ class helpCommand extends commando.Command {
                 let group_data = "";
                 for (let j = 0; j < group.length; j++) {
                     let command = group[j];
-                    console.log(command);
+                    //console.log(command);
                     group_data += `**${command.name}** - *${command.description}*\n`;
                 }
                 embed.addField(`${groups[i].name} commands:`, group_data)
