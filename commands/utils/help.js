@@ -36,7 +36,7 @@ class helpCommand extends commando.Command {
                 for (let j = 0; j < group.length; j++) {
                     let command = group[j];
                     if ((args.commandName === command.name) || (command.aliases.indexOf(args.commandName) >= 0)) {
-                        console.log(command);
+                        //console.log(command);
 
                         // All commands must have a description!
                         embed.setTitle(`**Help for ${command.name} command**:`)
