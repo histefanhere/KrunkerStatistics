@@ -15,7 +15,8 @@ class helpCommand extends commando.Command {
                 default: 'helpMenu',
                 prompt: 'won\'t this never be shown because the argument is optional? hmmm',
                 type: 'string'
-            }]
+            }],
+            examples: ['help', 'help krunker', 'help roll']
         });
     }
 
@@ -34,7 +35,7 @@ class helpCommand extends commando.Command {
                 const group = groups[i].commands.array();
                 for (let j = 0; j < group.length; j++) {
                     let command = group[j];
-                    if (args.commandName === command.name) {
+                    if ((args.commandName === command.name) || (command.aliases.indexOf(args.commandName) >= 0)) {
                         console.log(command);
 
                         // All commands must have a description!
@@ -55,6 +56,15 @@ class helpCommand extends commando.Command {
                             }
                         }
                         embed.addField(`Usage`, usage_output);
+
+                        let examples_output = '';
+                        for (let k = 0; k < command.examples.length; k++) {
+                            examples_output += `${this.client.commandPrefix}${command.examples[k]},\n`
+                        }
+                        examples_output = examples_output.slice(0, -2);
+                        embed.addField(`Examples`, examples_output, true);
+
+
 
                         if (command.aliases.length > 0) {
                             embed.addField(`Aliases`, `${command.aliases.join(', ')}`)

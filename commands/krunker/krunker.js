@@ -8,6 +8,7 @@ class krunkerStatsCommand extends commando.Command {
         super(client, {
             name: "krunker",
             aliases: ["get", "stats"],
+            examples: ["krunker histefanhere", "krunker Username"],
             group: "krunker",
             memberName: "krunker",
             description: "Gets a krunker players statistics",
