@@ -18,7 +18,13 @@ class InfoCommand extends commando.Command {
             title: '**Krunker Statistics**',
             fields: [{
                 name: 'Made By:',
-                value: 'Histefanhere'
+                value: 'Stefan Zdravkovic',
+                inline: true
+            }, {
+                name: 'Contact',
+                value: `**Discord**: histefanhere#3930
+                        **Reddit**: histefanhere`,
+                inline: true
             }, {
                 name: 'Source Code:',
                 value: 'https://github.com/histefanhere/KrunkerStatistics'
