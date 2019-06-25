@@ -3,7 +3,7 @@
 *.sublime-workspace
 
 # Do not share your discord bot tokens online!!!!
-token.txt
+token.json
 
 # Stores users and their preferences/data that the bot tracks.
-users.txt
+users.json

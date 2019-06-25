@@ -26,10 +26,14 @@ bot.on('ready', () => {
     });
 })
 
-// Get the discord bot token from token.txt and start the bot.
-var fs = require('fs');
-fs.readFile('token.txt', 'utf8', function(error, data) {
-    if (error) throw error;
-    console.log(data);
-    bot.login(data);
-});
+// Get the discord bot token from token.json and start the bot.
+try
+{
+    var token = require("./token.json").token;
+    console.log(token);
+    bot.login(token);
+}
+catch (e)
+{
+    throw e;
+}
