@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 const Discord = require('discord.js');
-const { Krunker: Api, OrderBy} = require("@fasetto/krunker.io")
+const { Krunker: Api, OrderBy, UserNotFoundError} = require("@fasetto/krunker.io")
 const Krunker = new Api();
 
 class krunkerStatsCommand extends commando.Command {
@@ -65,13 +65,24 @@ class krunkerStatsCommand extends commando.Command {
             }
             catch (e)
             {
-                message_.edit(message_.content, new Discord.RichEmbed({
-                    fields: [
-                    {
-                        name: `**${args.player}**:`,
-                        value: `*Player "${args.player}" not found!*`
-                    }]
-                }));
+                if (e instanceof UserNotFoundError) {
+                    message_.edit(message_.content, new Discord.RichEmbed({
+                        fields: [
+                        {
+                            name: `**${args.player}**:`,
+                            value: `*Player "${args.player}" not found!*`
+                        }]
+                    }));
+                }
+                else {
+                    message_.edit(message_.content, new Discord.RichEmbed({
+                        fields: [{
+                            name: `**${args.player}**:`,
+                            value: `*Error, Failed to reach Krunker Servers!*`
+                        }]
+                    }))
+                    throw e;
+                }
             }
         });
     }
