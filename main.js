@@ -30,7 +30,7 @@ bot.on('ready', () => {
 try
 {
     var token = require("./token.json").token;
-    console.log(token);
+    //console.log(token);
     bot.login(token);
 }
 catch (e)

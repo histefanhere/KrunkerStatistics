@@ -36,7 +36,7 @@ class helpCommand extends commando.Command {
                 for (let j = 0; j < group.length; j++) {
                     let command = group[j];
                     if ((args.commandName === command.name) || (command.aliases.indexOf(args.commandName) >= 0)) {
-                        console.log(command);
+                        //console.log(command);
 
                         // All commands must have a description!
                         embed.setTitle(`**Help for ${command.name} command**:`)
@@ -89,7 +89,7 @@ class helpCommand extends commando.Command {
                 let group_data = "";
                 for (let j = 0; j < group.length; j++) {
                     let command = group[j];
-                    console.log(command);
+                    //console.log(command);
                     group_data += `**${command.name}** - *${command.description}*\n`;
                 }
                 embed.addField(`${groups[i].name} commands:`, group_data)

@@ -7,3 +7,5 @@ token.json
 
 # Stores users and their preferences/data that the bot tracks.
 users.json
+
+*.swp
