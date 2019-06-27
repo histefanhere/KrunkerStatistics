@@ -1,5 +1,5 @@
-const commando = require('discord.js-commando');
 const Discord = require('discord.js');
+const commando = require('discord.js-commando');
 const { Krunker: Api, OrderBy, UserNotFoundError} = require("@fasetto/krunker.io")
 const Krunker = new Api();
 

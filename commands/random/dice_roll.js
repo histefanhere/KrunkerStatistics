@@ -27,7 +27,7 @@ class DiceRollCommand extends commando.Command {
         if (message.author.id === '216336989635608576') {
             roll = args.sides;
         }
-        message.reply("You rolled a " + roll);
+        message.reply(`You rolled a ${args.sides}-sided die and got a ... ${roll}!`);
     }
 }
 
