@@ -1,5 +1,5 @@
-const commando = require('discord.js-commando');
 const Discord = require('discord.js');
+const commando = require('discord.js-commando');
 
 class helpCommand extends commando.Command {
     constructor(client) {
