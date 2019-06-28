@@ -7,11 +7,11 @@ class krunkerStatsCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: "krunker",
-            aliases: ["get", "stats"],
+            aliases: ["kr"],
             examples: ["krunker histefanhere", "krunker Username"],
             group: "krunker",
             memberName: "krunker",
-            description: "Gets a krunker players statistics",
+            description: "Gets a krunker players statistics.",
             details: "Use this command to quickly view your or anyones stats. See someone in game who's really good? Check them out with this command!",
             args: [
                 {
@@ -81,7 +81,7 @@ class krunkerStatsCommand extends commando.Command {
                             name: `**${args.player}**:`,
                             value: `*Error, Failed to reach Krunker Servers!*`
                         }]
-                    }))
+                    }));
                     throw e;
                 }
             }
