@@ -63,7 +63,7 @@ class helpCommand extends commando.Command {
                         }
                         // remove trailing enter character
                         examples_output = examples_output.slice(0, -1);
-                        embed.addField(`eExamples`, examples_output, true);
+                        embed.addField(`Examples`, examples_output, true);
 
 
 
